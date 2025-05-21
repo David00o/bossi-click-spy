@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    fetch("https://webhook.site/51bc3e9d-1008-42d4-83a7-9bafeb8045e0", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userAgent: navigator.userAgent,
+        referrer: document.referrer,
+        time: new Date().toString()
+      })
+    });
+    setTimeout(function() {
+      window.location.href = "https://google.com";
+    }, 1500);
+  </script>
+</head>
+<body>
+  <h2>Loading... please wait</h2>
+</body>
+</html>
