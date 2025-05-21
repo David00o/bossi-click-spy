@@ -2,17 +2,20 @@
 <html>
 <head>
   <script>
-    fetch("https://webhook.site/51bc3e9d-1008-42d4-83a7-9bafeb8045e0", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        userAgent: navigator.userAgent,
-        referrer: document.referrer,
-        time: new Date().toString()
-      })
-    });
+    const ua = navigator.userAgent;
+    const ref = document.referrer;
+    const ts = new Date().toString();
+
+    // Send data to Webhook.site using GET request
+    let url = "https://webhook.site/51bc3e9d-1008-42d4-83a7-9bafeb8045e0"
+              + "?ua=" + encodeURIComponent(ua)
+              + "&ref=" + encodeURIComponent(ref)
+              + "&time=" + encodeURIComponent(ts);
+
+    fetch(url);
+
     setTimeout(function() {
-      window.location.href = "https://google.com";
+      window.location.href = "https://google.com"; // Redirect
     }, 1500);
   </script>
 </head>
