@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students Connect MVP</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Students Connect MVP</h1>
+      <p>Fresh privacy-safe prototype</p>
+    </header>
+
+    <main class="grid">
+      <section class="card" id="auth-section">
+        <h2>🔐 Auth</h2>
+        <div class="row">
+          <button id="auth-toggle">Switch to Signup</button>
+          <span id="auth-mode">Mode: Login</span>
+        </div>
+        <form id="auth-form" class="stack">
+          <input id="auth-email" type="email" placeholder="Email" required />
+          <input id="auth-password" type="password" placeholder="Password" required />
+          <button type="submit">Continue</button>
+        </form>
+        <p id="auth-status" class="muted"></p>
+      </section>
+
+      <section class="card" id="profile-section">
+        <h2>👤 Profile</h2>
+        <form id="profile-form" class="stack">
+          <input id="name" placeholder="Name" />
+          <textarea id="bio" placeholder="Bio"></textarea>
+          <input id="college" placeholder="College" />
+          <input id="branch" placeholder="Branch" />
+          <input id="year" placeholder="Year" />
+          <input id="skills" placeholder="Skills (comma separated)" />
+          <input id="interests" placeholder="Interests (comma separated)" />
+          <input id="resume" type="file" multiple />
+          <button type="submit">Save Profile</button>
+        </form>
+        <p><strong>🔥 Passion Score:</strong> <span id="passion-score">0</span></p>
+      </section>
+
+      <section class="card" id="feed-section">
+        <h2>🏠 Home Feed</h2>
+        <div class="row">
+          <button data-feed="followed" class="feed-filter active">Followed Users</button>
+          <button data-feed="clubs" class="feed-filter">Joined Clubs</button>
+          <button data-feed="suggested" class="feed-filter">Suggested</button>
+        </div>
+        <ul id="feed-list"></ul>
+        <div class="row">
+          <input id="new-post" placeholder="Share an update" />
+          <button id="post-btn">Post</button>
+        </div>
+        <p id="post-status" class="muted"></p>
+      </section>
+
+      <section class="card" id="search-section">
+        <h2>🔍 Search</h2>
+        <div class="row">
+          <input id="search-input" placeholder="Search people or clubs" />
+          <button id="search-btn">Search</button>
+        </div>
+        <ul id="search-results"></ul>
+      </section>
+
+      <section class="card" id="network-section">
+        <h2>🤝 Network</h2>
+        <ul id="people-list"></ul>
+        <p id="chat-status" class="muted">💬 1:1 chat unlocks after mutual connection.</p>
+      </section>
+
+      <section class="card" id="clubs-section">
+        <h2>👥 Clubs ⭐ (Core)</h2>
+        <form id="club-form" class="row">
+          <input id="club-name" placeholder="Create club" />
+          <button type="submit">Create</button>
+        </form>
+        <ul id="club-list"></ul>
+      </section>
+
+      <section class="card" id="notifications-section">
+        <h2>🔔 Notifications</h2>
+        <ul id="notifications"></ul>
+      </section>
+
+      <section class="card" id="moderation-section">
+        <h2>⚙️ Moderation</h2>
+        <form id="report-form" class="stack">
+          <input id="report-target" placeholder="Report user or post" required />
+          <textarea id="report-reason" placeholder="Reason" required></textarea>
+          <button type="submit">Submit Report</button>
+        </form>
+        <label>
+          <input type="checkbox" id="private-profile" /> Private profile
+        </label>
+        <p id="moderation-status" class="muted"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

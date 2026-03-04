@@ -1,0 +1,101 @@
+# bossi-click-spy
+# Students Connect MVP (Fresh Repo)
+
+This repository contains a simple demo app for **Students Connect**.
+
+It is made for quick testing in a browser and does **not** need coding knowledge.
+
+---
+
+## What this demo includes
+
+- Login/Signup screen
+- Profile form (name, bio, college, skills, etc.)
+- Passion Score
+- Home feed with posting
+- Search (people/clubs)
+- Network actions (follow/connect)
+- Clubs (create/join/discussion + club score)
+- Notifications
+- Moderation (report + privacy toggle)
+
+---
+
+## I am not technical — how do I open it?
+
+### Option A (easiest, no terminal)
+
+1. Open the project folder.
+2. Double-click `index.html`.
+3. Your browser will open the app.
+
+If this works for you, stop here ✅
+
+---
+
+### Option B (recommended if Option A fails)
+
+> Use this only if the page does not work correctly with double-click.
+
+1. Open **Terminal** (or Command Prompt / PowerShell).
+2. Go to the project folder.
+3. Run:
+
+```bash
+python3 -m http.server 8000
+```
+
+4. Open browser and go to:
+
+```text
+http://localhost:8000
+```
+
+---
+
+## Beginner test checklist (click-by-click)
+
+1. **Auth**
+   - Click "Switch to Signup" and back.
+   - Enter any email/password.
+   - Click **Continue**.
+
+2. **Profile**
+   - Fill Name, Bio, Skills, Interests.
+   - Click **Save Profile**.
+   - Check Passion Score updates.
+
+3. **Feed**
+   - Switch tabs: Followed / Joined Clubs / Suggested.
+   - Write a post and click **Post**.
+   - Try posting again quickly (anti-spam message should appear).
+
+4. **Search**
+   - Search `Aarav` or `AI`.
+   - You should see matching results.
+
+5. **Network**
+   - Try Follow/Unfollow.
+   - Try Connect.
+
+6. **Clubs**
+   - Create a club.
+   - Join/Leave a club.
+   - Click Add Discussion.
+
+7. **Moderation**
+   - Submit a report.
+   - Toggle Private profile.
+
+8. **Notifications**
+   - Confirm new actions appear in notifications.
+
+---
+
+## Important note
+
+This is a demo only.
+
+Data is stored temporarily in browser memory, so refreshing the page resets data.
+app.js
+app.js

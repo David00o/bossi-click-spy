@@ -1,0 +1,89 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+  color: #172033;
+}
+
+.topbar {
+  background: #111c3a;
+  color: #fff;
+  padding: 1rem 1.25rem;
+}
+
+.topbar h1,
+.topbar p {
+  margin: 0;
+}
+
+.topbar p {
+  opacity: 0.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 12px;
+  padding: 12px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 1px 6px rgba(15, 23, 42, 0.12);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input,
+textarea,
+button {
+  padding: 8px;
+  border: 1px solid #ced4e0;
+  border-radius: 8px;
+}
+
+button {
+  background: #1d4ed8;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button.active {
+  background: #0f766e;
+}
+
+ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin: 6px 0;
+}
+
+.muted {
+  color: #4a5568;
+  font-size: 0.9rem;
+}
